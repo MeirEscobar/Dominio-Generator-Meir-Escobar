@@ -1,27 +1,21 @@
-window.onload = function() {
-  let who = ['The dog', 'My grandma', 'The mailman', 'My bird'];
-
-  let action = ['ate', 'peed', 'crushed', 'broke'];
-
-  let what = ['my homework', 'my phone', 'the car'];
-
-  let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
-
+  function calTotalDominios(pronoun, adj, noun, tld){
+    pronoun.length * adj.length * noun.length * tld.length;
+  }
   
-    let nWho = Math.floor(Math.random() * who.length);
-    let nAction = Math.floor(Math.random() * action.length);
-    let nWhat = Math.floor(Math.random() * what.length);
-    let nWhen = Math.floor(Math.random() * when.length);
+  let pronoun = ['the', 'our'];
 
-    finalWho = who[nWho];
-    finalAction = action[nAction];
-    finalWhat = what[nWhat];
-    finalWhen = when[nWhen];
+  let adj = ['great', 'big'];
 
-    let finalExcuse = finalWho + " " + finalAction + " " + finalWhat + " " +finalWhen;
+  let noun = ['jogger', 'racoon'];
 
-    console.log(finalExcuse)
+  let tld = ['com', 'es']
 
-  document.getElementById("excuse").innerHTML = finalExcuse;
-  console.log("Hello Rigo from the console!");
-};
+  for (let p of pronoun) {
+    for (let a of adj) {
+        for (let n of noun) {
+            for (let t of tld) {
+                console.log(`${p}${a}${n}.${t}`);
+            }
+        }
+    }
+}
